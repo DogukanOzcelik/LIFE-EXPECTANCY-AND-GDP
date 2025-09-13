@@ -6,7 +6,7 @@ import pandas as pd
 df = pd.read_csv('all_data.csv')
 print(df.head())
 
-df.rename(columns={"Life expectancy at birth (years)": "life_expentancy"}, inplace=True)
+df.rename(columns={"Life expectancy at birth (years)": "life_expectancy"}, inplace=True)
 
 
 ########### Has life expectancy increased over time in the six nations? ###########
@@ -27,20 +27,18 @@ df.rename(columns={"Life expectancy at birth (years)": "life_expentancy"}, inpla
 # plt.close()
 ########### Life expectancy tend to be increasing over time in the six nations. ###########
 
+
+
 ########### Has GDP increased over time in the six nations? ###########
-sns.lineplot(x='Year', y='GDP', hue='Country', data=df)
-plt.show()
-plt.close()
+# sns.lineplot(x='Year', y='GDP', hue='Country', data=df)
+# plt.show()
+# plt.close()
 ########### GDP is increased for USA and China but for other countries, it remains constant ###########
 
+
+
 ########### Is there a correlation between GDP and life expectancy of a country? ###########
-
-########### ###########
-
-########### What is the average life expectancy in these nations? ###########
-
-########### ###########
-
-########### What is the distribution of that life expectancy? ###########
-
-########### ###########
+# sns.scatterplot(x='life_expectancy', y='GDP', hue='Country', data=df)
+# plt.show()
+# plt.close()
+########### There is a positive correlation for every country except Zimbabwe ###########
