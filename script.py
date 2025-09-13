@@ -35,7 +35,7 @@ df.rename(columns={"Life expectancy at birth (years)": "life_expectancy"}, inpla
 # plt.title("GDP Over the Years")
 # plt.show()
 # plt.close()
-########### GDP is increased for USA and China but for other countries, it remains constant ###########
+########### GDP is increased especially USA and China but for other countries ###########
 
 
 
@@ -50,16 +50,20 @@ df.rename(columns={"Life expectancy at birth (years)": "life_expectancy"}, inpla
 
 
 ########### What is the average life expectancy in these nations? ###########
-average_life_expectancy = df.groupby('Country').mean('life_expectancy').life_expectancy
-plt.figure(figsize=(8, 6))
-plt.title("Average Life Expectancy")
-sns.barplot(x=average_life_expectancy.index, y=average_life_expectancy.values, palette='husl')
-plt.xticks(rotation=45)
-plt.show()
-plt.close()
-
-########### ###########
-
+# average_life_expectancy = df.groupby('Country').mean('life_expectancy').life_expectancy
+# plt.figure(figsize=(8, 6))
+# plt.title("Average Life Expectancy")
+# sns.barplot(x=average_life_expectancy.index, y=average_life_expectancy.values, palette='husl')
+# plt.xticks(rotation=45)
+# plt.show()
+# plt.close()
+########### Average life expectancy in 70s ###########
 
 
 
+########### What is the distribution of that life expectancy? ###########
+# plt.figure(figsize=(10, 8))
+# plt.hist(df.life_expectancy)
+# plt.show()
+# plt.close()
+########### Distribution is left skewed, meaning some countries has extremely low life expectancy ###########
